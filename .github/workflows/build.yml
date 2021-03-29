@@ -20,4 +20,4 @@ jobs:
       - name: run lint
         run: npm run lint
       - name: build bot
-        run: npm build
+        run: npm run build
