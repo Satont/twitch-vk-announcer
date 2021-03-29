@@ -16,7 +16,7 @@ jobs:
         uses: opspresso/action-docker@v0.2.1
         env:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          PASSWORD: ${{ secrets.GITHUB_TOKEN }}
           REGISTRY: docker.pkg.github.com
           IMAGE_NAME: 'satont/twitch-vk-announcer'
           TAG_NAME: master:latest
