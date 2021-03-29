@@ -1,6 +1,5 @@
 import { ApiClient } from 'twitch'
 import { ClientCredentialsAuthProvider } from 'twitch-auth'
-import NgRok from 'ngrok'
 import { isProduction, PORT } from './variables'
 import * as eventSub from 'twitch-eventsub'
 import { expressApp } from './express'
@@ -23,7 +22,7 @@ const unsubscribeFromAllSubscriptions = async () => {
 const getHostName = async () => {
   if (isProduction) return process.env.HOSTNAME
 
-  const ngrok = await NgRok.connect(PORT)
+  const ngrok = (await import('ngrok')).default.connect(PORT)
   return ngrok
 }
 
