@@ -8,7 +8,6 @@ on:
 jobs:
   heroku:
     if: "! contains(toJSON(github.event.commits.*.message), '[skip-heroku]')"
-    if: ${{secrets.HEROKU_API_KEY}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
