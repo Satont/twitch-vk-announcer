@@ -1,0 +1,44 @@
+{
+  "name": "twitch-vk-announcer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "dev": "tsc-watch --onSuccess \"ts-node src/\"",
+    "build": "tsc",
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "npx eslint --ext .ts --fix src"
+  },
+  "author": "Satont <satontworldwide@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/lodash": "^4.14.168",
+    "@types/node": "^14.14.35",
+    "@types/source-map-support": "^0.5.3",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.23.0",
+    "ngrok": "^3.4.1",
+    "tsc-watch": "^4.2.9",
+    "twitch-eventsub-ngrok": "^4.5.2",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fastify-express": "^0.3.2",
+    "got": "^11.8.2",
+    "lodash": "^4.17.21",
+    "middie": "^5.2.0",
+    "source-map-support": "^0.5.19",
+    "twitch": "^4.5.2",
+    "twitch-auth": "^4.5.2",
+    "twitch-eventsub": "^4.5.2"
+  }
+}
